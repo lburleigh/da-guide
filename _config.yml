@@ -1,5 +1,6 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
+# to update book after adding/editing and re-building, cd into guide and run: ghp-import -n -p -f da-guide/_build/html
 
 title: fMRI Domain Adaptation Guide
 author: Lauryn Burleigh
@@ -23,7 +24,7 @@ bibtex_bibfiles:
 repository:
   url: https://github.com/lburleigh/da-guide  # Online location of your book, https://github.com/executablebooks/jupyter-book
   path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  branch: gh-pages/  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
