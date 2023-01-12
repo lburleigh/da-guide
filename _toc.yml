@@ -1,0 +1,27 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+title: Introduction
+parts:
+- caption: Domain Adaptation Info
+  chapters:
+  - file: 01-da_info/traditional_ML
+    title: Traditional Machine Learning
+  - file: 01-da_info/tl_dl
+    title: Transfer Learning/Domain Adaptation
+  - file: 01-da_info/when
+    title: When to Domain Adaptation
+  - file: 01-da_info/what
+    title: What to Domain Adaptation
+  - file: 01-da_info/limit
+    title: Domain Adaptation Limitation
+- caption: CoIR 
+  chapters:
+  - file: 01-da_info/coir_info
+    title: CoIR Introduction
+  - file: 01-da_info/coir_ls
+    title: CoIR_LS
+
+
