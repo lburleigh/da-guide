@@ -22,6 +22,6 @@ parts:
   - file: 01-da_info/coir_info
     title: CoIR Introduction
   - file: 01-da_info/coir_ls
-    title: CoIR<sub>LS</sub>
+    title: CoIR-LS
 
 
