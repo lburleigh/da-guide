@@ -14,7 +14,7 @@ Inputs required include:
 
 ## Hyper-Parameters
 Hyper-parameters (i.e., values that control the model’s learning process) include: 
-- lambda  ($\lambda$)
+- lambda  ($\lambda$), which controls the importance of dependence on domain covariates
 - alpha ($\alpha$)
 
 Optimal hyper-parameters can be found using leave-one-domain-out cross validation on source domain data. 
