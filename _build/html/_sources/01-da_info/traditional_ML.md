@@ -3,6 +3,8 @@
 Machine learning (ML), a category of artificial intelligence, is a useful tool for multiple domains but can be particularly impactful for cognitive neuroscientists and functional magnetic resonance imagining (fMRI) researchers as it enables computers to learn a task based on data given, similar to how humans learn from experience, without explicitly programming the learning task. The process allows computers to modify their actions over multiple iterations, or attempts, to improve accuracy (i.e., number of times the action produces a correct result). The machine learning process is related to Bayesian statistics, a null hypothesis statistic testing alternative which allows prior knowledge to influence the test at hand, and computational statistics, which make statistical predictions via computers. Solving a problem via traditional ML involves a model (i.e., the task to learn or problem to solve) being trained on a dataset to learn the task question at hand, and being tested on alternate but identical data (i.e., a subset of the original dataset: data of one run from each subject, or one subject, of the study used in training but not included in the training itself) (Alzubi et al. 2018). An important requirement of traditional ML is that a dataset must include the same data for the learning task (i.e., data from only one study can be used in the model).
 
 ![Traditional Machine Learning](images/traditionalML.JPG)
+|:--:|
+| <b>Fig. 1 - Traditional ML allows a dataset from a single study to contribute to the model’s learning task.</b>|
 
 ## Questions of Machine Learning
 
