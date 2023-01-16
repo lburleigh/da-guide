@@ -1,6 +1,6 @@
-# CoIRLS
+# CoIR<sub>LS</sub>
 
-The CoIRLS framework is completed in 4 steps: 
+The CoIR<sub>LS</sub> framework is completed in 4 steps: 
 1. encode domain covariates with one-hot encoding
 2. construct the identity matrix, centering matrix, probability matrix, and a matrix denoting unlabeled target data as 0s
 3. construct kernel matrix and linear kernel
