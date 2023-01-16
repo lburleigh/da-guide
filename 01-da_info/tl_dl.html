@@ -104,7 +104,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../index.html">
-                    <no title>
+                    Cognitive Neuroscience
                 </a>
             </li>
         </ul>
@@ -311,12 +311,41 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#source-and-target-domains">
+   Source and Target Domains
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-transfer-learning">
+   Types of Transfer Learning
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -328,6 +357,24 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#source-and-target-domains">
+   Source and Target Domains
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-transfer-learning">
+   Types of Transfer Learning
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -338,10 +385,23 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="transfer-learning-and-domain-adaptation">
 <h1>Transfer Learning and Domain Adaptation<a class="headerlink" href="#transfer-learning-and-domain-adaptation" title="Permalink to this headline">#</a></h1>
 <p>TL addresses the limitation of knowledge generalization and sharing in traditional ML models. Rather than allowing only identical data (i.e., one study) to contribute to a model, TL can leverage information gained from related datasets, allowing a larger and more diverse set of data to influence the model. This allows TL to more similarly represent humans than traditional ML, as humans generalize knowledge learned to new situations both intentionally (Pfordresher et al. 2021) and unintentionally (Greening et al. 2021).</p>
+<section id="source-and-target-domains">
+<h2>Source and Target Domains<a class="headerlink" href="#source-and-target-domains" title="Permalink to this headline">#</a></h2>
 <p>Data input into TL is either part of the source domain (i.e., the data to be leveraged; blue dataset box in Fig. 3a) or target domain (i.e., the data to be classified; green ‘Dataset’ box in Fig. 3a). The task to be learned, which uses the source domain data, is the source task (blue ‘Learning Task’ box in Fig. 3a). Using the source domain data to train the source task results in the model gaining the knowledge of this learned source task. This knowledge-improved model then influences the target task (white ‘Learning Task’ box in Fig. 3a) which the target domain data is used for. When the same source and target domains are used (i.e., identical data from one study), and the same source and target tasks are used (i.e., one learning task), the analysis is equivalent to a traditional ML model.</p>
-<p>INSERT FIGURE HERE</p>
-<p>There are three subtypes of TL based on the relationship between the two domains and between the two tasks (see Table 1): (a) Inductive TL uses the same domains and different but related tasks; (b) Unsupervised TL uses different but related domains and different but related tasks; and (c) Transductive TL uses different but related domains and the same tasks (see Fig. 3b). A domain has two components: a feature space (i.e., the space of all term vectors) and a marginal probability distribution of the learning sample, both of which are derived from the same dataset. When the source and target domain are different, it implies that either the source and target feature spaces, or the source and target probability distributions are not the same. Domain adaptation (DA), the focus of this guide, specifies that the difference in domains occurs in the marginal probability distributions. Transductive TL, and therefore domain adaptation, specifies that the learning tasks are the same, implying that a predictive function learned in the source domain can be adapted to use in the target domain if some unlabeled target-domain data is provided.</p>
-<p>INSERT TABLE/FIG HERE</p>
+<p><img alt="Transfer and Transductive Learning" src="../_images/TLs.JPG" /></p>
+</section>
+<section id="types-of-transfer-learning">
+<h2>Types of Transfer Learning<a class="headerlink" href="#types-of-transfer-learning" title="Permalink to this headline">#</a></h2>
+<p>There are three subtypes of TL based on the relationship between the two domains and between the two tasks (see Table 1):</p>
+<ul class="simple">
+<li><p>Inductive TL uses the same domains and different but related tasks</p></li>
+<li><p>Unsupervised TL uses different but related domains and different but related tasks</p></li>
+<li><p>Transductive TL uses different but related domains and the same tasks</p></li>
+</ul>
+<p>A domain has two components: a feature space (i.e., the space of all term vectors) and a marginal probability distribution of the learning sample, both of which are derived from the same dataset. When the source and target domain are different, it implies that either the source and target feature spaces, or the source and target probability distributions are not the same.</p>
+<p><strong>Domain adaptation (DA)</strong>, the focus of this guide, specifies that the difference in domains occurs in the marginal probability distributions. Transductive TL, and therefore domain adaptation, specifies that <em>the learning tasks are the same</em>, implying that a predictive function learned in the source domain can be adapted to use in the target domain if some unlabeled target-domain data is provided.</p>
+<p><img alt="Transfer Learning Breakdown" src="../_images/TLtable.JPG" /></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
