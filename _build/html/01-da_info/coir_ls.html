@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="About CoIR" href="coir_info.html" />
@@ -403,11 +405,11 @@ title="Print to PDF"
 <h2>Hyper-Parameters<a class="headerlink" href="#hyper-parameters" title="Permalink to this headline">#</a></h2>
 <p>Hyper-parameters (i.e., values that control the model’s learning process) include:</p>
 <ul class="simple">
-<li><p>mean (i.e., μ1 and μ2)</p></li>
-<li><p>kernel function and corresponding hyper-parameters.</p></li>
+<li><p>lambda  (<span class="math notranslate nohighlight">\(\lambda\)</span>)</p></li>
+<li><p>alpha (<span class="math notranslate nohighlight">\(\alpha\)</span>)</p></li>
 </ul>
 <p>Optimal hyper-parameters can be found using leave-one-domain-out cross validation on source domain data.</p>
-<p>The algorithm is not sensitive to the trade-off parameter, indicating the covariate-independence regularization importance stability (see Fig. 4 c). This algorithm is also not sensitive to the mean, though larger values greater than 10,000 can lead to a change in performance (see Fig. 4 d).</p>
+<p>The algorithm is not sensitive to the trade-off parameter, indicating the covariate-independence regularization importance stability (see Fig. 3a). This algorithm is also not sensitive to alpha, though larger values greater than 10,000 can lead to a change in performance (see Fig. 3b).</p>
 <p><img alt="Hyperparameters" src="../_images/CoIRsens.JPG" /></p>
 <p><b>Fig. 3 - Sensitivity of classification accuracy with respect to hyper-parameters of CoIRLS on five multi-source brain decoding tasks from OpenNeuro </b></p>
 </section>

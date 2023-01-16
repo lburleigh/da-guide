@@ -14,12 +14,12 @@ Inputs required include:
 
 ## Hyper-Parameters
 Hyper-parameters (i.e., values that control the model’s learning process) include: 
-- mean (i.e., μ1 and μ2)
-- kernel function and corresponding hyper-parameters. 
+- lambda  ($\lambda$)
+- alpha ($\alpha$)
 
 Optimal hyper-parameters can be found using leave-one-domain-out cross validation on source domain data. 
 
-The algorithm is not sensitive to the trade-off parameter, indicating the covariate-independence regularization importance stability (see Fig. 4 c). This algorithm is also not sensitive to the mean, though larger values greater than 10,000 can lead to a change in performance (see Fig. 4 d). 
+The algorithm is not sensitive to the trade-off parameter, indicating the covariate-independence regularization importance stability (see Fig. 3a). This algorithm is also not sensitive to alpha, though larger values greater than 10,000 can lead to a change in performance (see Fig. 3b). 
 
 ![Hyperparameters](images/CoIRsens.JPG)
 
