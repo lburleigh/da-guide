@@ -1,6 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
-# to update book after adding/editing and re-building, cd into da-guide and run: ghp-import -n -p -f _build/html
+# to update book after adding/editing: 
+  # from guide directory: jupyter-book build da-guide/
+  # cd into da-guide and run: ghp-import -n -p -f _build/html
 
 title: fMRI Domain Adaptation Guide
 author: Lauryn Burleigh
