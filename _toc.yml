@@ -11,12 +11,8 @@ parts:
     title: Traditional Machine Learning
   - file: 01-da_info/tl_dl
     title: Transfer Learning/Domain Adaptation
-  - file: 01-da_info/when
-    title: When to Domain Adaptation
-  - file: 01-da_info/what
-    title: What to Domain Adaptation
-  - file: 01-da_info/limit
-    title: Domain Adaptation Limitation
+  - file: 01-da_info/domainadapt
+    title: To Domain Adapt or Not To Domain Adapt
 - caption: CoIR 
   chapters:
   - file: 01-da_info/coir_info
