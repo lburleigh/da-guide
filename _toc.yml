@@ -16,7 +16,7 @@ parts:
 - caption: CoIR 
   chapters:
   - file: 01-da_info/coir_info
-    title: CoIR Introduction
+    title: About CoIR
   - file: 01-da_info/coir_ls
     title: CoIR-LS
 
