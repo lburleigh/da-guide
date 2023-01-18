@@ -91,6 +91,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">fMRI Domain Adaptation Guide</h1>
@@ -400,7 +405,7 @@ title="Print to PDF"
 </ul>
 <p>Optimal hyper-parameters can be found using leave-one-domain-out cross validation on source domain data.</p>
 <p>The algorithm is not sensitive to the trade-off parameter, indicating the covariate-independence regularization importance stability (see Fig. 3a).</p>
-<p><img alt="Hyperparameters" src="01-da_info/images/CoIRsenslamb.JPG" /></p>
+<p><img alt="Hyperparameters" src="../_images/CoIRsenslamb.jpg" /></p>
 <p><b>Fig. 3 - Sensitivity of classification accuracy with respect to hyper-parameters of CoIRLS on five multi-source brain decoding tasks from OpenNeuro </b></p>
 </section>
 </section>
