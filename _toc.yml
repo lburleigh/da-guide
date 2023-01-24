@@ -19,5 +19,10 @@ parts:
     title: About CoIR
   - file: 01-da_info/coir_ls
     title: CoIR-LS
-
+- caption: Code
+  chapters:
+  - file: 02-code/coir_code
+    title: Code
+  - file: 02-code/coir_output
+  title: Output
 

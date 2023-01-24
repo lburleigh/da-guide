@@ -18,5 +18,3 @@ Hyper-parameters (i.e., values that control the model’s learning process) incl
 - alpha ($\alpha$), which controls the constraint of coefficients
 
 Optimal hyper-parameters can be found using leave-one-domain-out cross validation on source domain data. 
-
-The algorithm is not sensitive to the trade-off parameter, indicating the covariate-independence regularization importance stability (see Fig. 3a).

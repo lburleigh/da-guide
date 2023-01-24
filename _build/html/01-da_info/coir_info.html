@@ -143,12 +143,29 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   CoIR Introduction
+   About CoIR
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="coir_ls.html">
    CoIR-LS
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-code/coir_code.html">
+   Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-code/coir_output.html">
+   CoIR Output
   </a>
  </li>
 </ul>
@@ -340,7 +357,7 @@ title="Print to PDF"
 <li><p>minimizing model complexity (i.e., reduce the upper bound of generalization risk).</p></li>
 </ul>
 <p>The classifiers can be viewed as feature mapping where samples of all domains are in the same distribution and project the input features to a one-dimensional output space, regularizing the hypothesis space to reduce model complexity. Additionally, the algorithm minimizes empirical error on labeled data and domain dependence on domain covariates further reducing model complexity. Minimalizing the prediction/empirical error and the domain dependence occurs in the framework simultaneously, so can therefore be viewed as combining the benefits of domain-invariant classifier methods and domain dependence minimization mapping.</p>
-<p>The CoIRLS algorithm uses the regularized least squares classifier, considering unique experiment-subject combinations by encoding a matrix of experiment designs and subjects as domain covariates for domain adaptation, called one-hot encoding. The output is a one-dimensional space of model weights for the classification task at hand, which can be used to identify the top 1% coefficients (in magnitude) to in turn visualize the brain areas of positive and negative activation for interpretation.</p>
+<p>The CoIR<sub>LS</sub> algorithm uses the regularized least squares classifier, considering unique experiment-subject combinations by encoding a matrix of experiment designs and subjects as domain covariates for domain adaptation, called one-hot encoding. The output is a one-dimensional space of model weights for the classification task at hand, which can be used to identify the top 1% coefficients (in magnitude) to in turn visualize the brain areas of positive and negative activation for interpretation.</p>
 </section>
 
     <script type="text/x-thebe-config">

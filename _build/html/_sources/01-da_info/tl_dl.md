@@ -5,9 +5,9 @@ Transfer Learning (TL) addresses the limitation of knowledge generalization and 
 ## Source and Target Domains
 Data input into TL is either part of the source domain (i.e., the data to be leveraged; blue dataset box in Fig. 3a) or target domain (i.e., the data to be classified; green ‘Dataset’ box in Fig. 3a). The task to be learned, which uses the source domain data, is the source task (blue ‘Learning Task’ box in Fig. 3a). Using the source domain data to train the source task results in the model gaining the knowledge of this learned source task. This knowledge-improved model then influences the target task (white ‘Learning Task’ box in Fig. 3a) which the target domain data is used for. When the same source and target domains are used (i.e., identical data from one study), and the same source and target tasks are used (i.e., one learning task), the analysis is equivalent to a traditional ML model. 
 
-![Transfer and Transductive Learning](images/TLs.JPG)
+![Transfer and Transductive Learning](images/TL.JPG)
 
-<b>Fig. 2 - Learning processes between (a) transfer learning in general and (b) domain adaptation, a type of transductive transfer learning model. </b>
+<b>Fig. 2 - Domain Adaptation process. </b>
 
 ## Types of Transfer Learning
 There are three subtypes of TL based on the relationship between the two domains and between the two tasks (see Table 1): 
@@ -21,4 +21,4 @@ A domain has two components: a feature space (i.e., the space of all term vector
 
 ![Transfer Learning Breakdown](images/TLtable.JPG)
 
-<b>Table 1 - The relationship between traditional ML and the three TL subtypes from (Pan and Yang 2010). </b>
+<b>Table 1 - The relationship between traditional ML and the three TL subtypes. </b>

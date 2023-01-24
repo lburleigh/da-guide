@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Transfer Learning and Domain Adaptation &#8212; fMRI Domain Adaptation Guide</title>
+    <title>CoIR Code &#8212; fMRI Domain Adaptation Guide</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Domain Adaptation" href="domainadapt.html" />
-    <link rel="prev" title="Machine Learning" href="traditional_ML.html" />
+    <link rel="next" title="CoIR Output" href="coir_output.html" />
+    <link rel="prev" title="CoIRLS" href="../01-da_info/coir_ls.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,19 +118,19 @@ const thebe_selector_output = ".output, .cell_output"
   Domain Adaptation Info
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="traditional_ML.html">
+  <a class="reference internal" href="../01-da_info/traditional_ML.html">
    Traditional Machine Learning
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-da_info/tl_dl.html">
    Transfer Learning/Domain Adaptation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="domainadapt.html">
+  <a class="reference internal" href="../01-da_info/domainadapt.html">
    To Domain Adapt or Not To Domain Adapt
   </a>
  </li>
@@ -142,12 +142,12 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="coir_info.html">
+  <a class="reference internal" href="../01-da_info/coir_info.html">
    About CoIR
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="coir_ls.html">
+  <a class="reference internal" href="../01-da_info/coir_ls.html">
    CoIR-LS
   </a>
  </li>
@@ -157,14 +157,14 @@ const thebe_selector_output = ".output, .cell_output"
   Code
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../02-code/coir_code.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Code
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-code/coir_output.html">
+  <a class="reference internal" href="coir_output.html">
    CoIR Output
   </a>
  </li>
@@ -258,7 +258,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/lburleigh/da-guide/issues/new?title=Issue%20on%20page%20%2F01-da_info/tl_dl.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/lburleigh/da-guide/issues/new?title=Issue%20on%20page%20%2F02-code/coir_code.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -286,7 +286,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/01-da_info/tl_dl.md"
+        <a href="../_sources/02-code/coir_code.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -346,13 +346,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#source-and-target-domains">
-   Source and Target Domains
+  <a class="reference internal nav-link" href="#directory-setup">
+   Directory Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#types-of-transfer-learning">
-   Types of Transfer Learning
+  <a class="reference internal nav-link" href="#script-1">
+   Script 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#script-2">
+   Script 2
   </a>
  </li>
 </ul>
@@ -364,7 +369,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Transfer Learning and Domain Adaptation</h1>
+                <h1>CoIR Code</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -375,13 +380,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#source-and-target-domains">
-   Source and Target Domains
+  <a class="reference internal nav-link" href="#directory-setup">
+   Directory Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#types-of-transfer-learning">
-   Types of Transfer Learning
+  <a class="reference internal nav-link" href="#script-1">
+   Script 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#script-2">
+   Script 2
   </a>
  </li>
 </ul>
@@ -394,27 +404,42 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="transfer-learning-and-domain-adaptation">
-<h1>Transfer Learning and Domain Adaptation<a class="headerlink" href="#transfer-learning-and-domain-adaptation" title="Permalink to this headline">#</a></h1>
-<p>Transfer Learning (TL) addresses the limitation of knowledge generalization and sharing in traditional ML models. Rather than allowing only identical data (i.e., one study) to contribute to a model, TL can leverage information gained from related datasets, allowing a larger and more diverse set of data to influence the model. This allows TL to more similarly represent humans than traditional ML, as humans generalize knowledge learned to new situations both intentionally (Pfordresher et al. 2021) and unintentionally (Greening et al. 2021).</p>
-<section id="source-and-target-domains">
-<h2>Source and Target Domains<a class="headerlink" href="#source-and-target-domains" title="Permalink to this headline">#</a></h2>
-<p>Data input into TL is either part of the source domain (i.e., the data to be leveraged; blue dataset box in Fig. 3a) or target domain (i.e., the data to be classified; green ‘Dataset’ box in Fig. 3a). The task to be learned, which uses the source domain data, is the source task (blue ‘Learning Task’ box in Fig. 3a). Using the source domain data to train the source task results in the model gaining the knowledge of this learned source task. This knowledge-improved model then influences the target task (white ‘Learning Task’ box in Fig. 3a) which the target domain data is used for. When the same source and target domains are used (i.e., identical data from one study), and the same source and target tasks are used (i.e., one learning task), the analysis is equivalent to a traditional ML model.</p>
-<p><img alt="Transfer and Transductive Learning" src="../_images/TL.JPG" /></p>
-<p><b>Fig. 2 - Domain Adaptation process. </b></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="coir-code">
+<h1>CoIR Code<a class="headerlink" href="#coir-code" title="Permalink to this headline">#</a></h1>
+<p>All scripts and code to run the CoIR<sub>LS</sub> algorithm can be access on GitHub
+<a class="reference external" href="https://github.com/lburleigh/lb_dissertation">CoIR</a></p>
+<section id="directory-setup">
+<h2>Directory Setup<a class="headerlink" href="#directory-setup" title="Permalink to this headline">#</a></h2>
+<p>Store functional nifti fMRI files in the following directory: data &gt; raw &gt; pymvpa &gt; <strong>subject#</strong> &gt; <strong>fmri_files</strong>.nii.gz</p>
+<p>ROI binary group masks should be stored in the directory: data &gt; raw &gt; roi &gt; <strong>mask_name</strong>.nii.gz</p>
 </section>
-<section id="types-of-transfer-learning">
-<h2>Types of Transfer Learning<a class="headerlink" href="#types-of-transfer-learning" title="Permalink to this headline">#</a></h2>
-<p>There are three subtypes of TL based on the relationship between the two domains and between the two tasks (see Table 1):</p>
+<section id="script-1">
+<h2>Script 1<a class="headerlink" href="#script-1" title="Permalink to this headline">#</a></h2>
+<p>Script 01_apply_roi.py should be run first. This script takes in the functional fMRI nifti files and a binary ROI mask in order to create a final .npz which stores the relevant task, mask, and fMRI information to be used in the following algorithm.</p>
+<p>First, edit the variables assigned in lines 13-18 of the 01_apply_roi.py script.</p>
 <ul class="simple">
-<li><p>Inductive TL uses the same domains and different but related tasks</p></li>
-<li><p>Unsupervised TL uses different but related domains and different but related tasks</p></li>
-<li><p>Transductive TL uses different but related domains and the same tasks</p></li>
+<li><p>Line 13 denotes that the condition tuple contains a phase, experiment, mask, and subject.</p></li>
+<li><p>Line 16 defines the phases. In the study this code was designed for, the two phases are two sets of tasks that were performed by each participant.</p></li>
+<li><p>Line 17 defines the experiments. In the study the code was designed for, the experiments are the two task types given in each phase. The “hab” experiment refers to a habituation task in which the instructions were learned and performed while the “task” experiment refers to the main task in which fear conditioning was introduced.</p></li>
+<li><p>Line 18 defines the mask name <strong>wihtout</strong> .nii.gz</p></li>
+<li><p>Lines 13 and 19-23 may need to be edited if any of the previous variables are not relevant to your study.</p></li>
 </ul>
-<p>A domain has two components: a feature space (i.e., the space of all term vectors) and a marginal probability distribution of the learning sample, both of which are derived from the same dataset. When the source and target domain are different, it implies that either the source and target feature spaces, or the source and target probability distributions are not the same.</p>
-<p><strong>Domain adaptation (DA)</strong>, the focus of this guide, specifies that the difference in domains occurs in the marginal probability distributions. Transductive TL, and therefore domain adaptation, specifies that <em>the learning tasks are the same</em>, implying that a predictive function learned in the source domain can be adapted to use in the target domain if some unlabeled target-domain data is provided.</p>
-<p><img alt="Transfer Learning Breakdown" src="../_images/TLtable.JPG" /></p>
-<p><b>Table 1 - The relationship between traditional ML and the three TL subtypes. </b></p>
+<p>When all variables are adjusted to the study data, run this python script.</p>
+</section>
+<section id="script-2">
+<h2>Script 2<a class="headerlink" href="#script-2" title="Permalink to this headline">#</a></h2>
+<p>Script 02_fit_models.py takes in the .npz file created from 02_fit_models.py to run the CoIR<sub>LS</sub>.</p>
+<p>First, edit the variables assigned in lines 7-19 of the 02_fit_models.py script.</p>
+<ul class="simple">
+<li><p>Line 7 specifies the phase to run the algorithm on</p></li>
+<li><p>Line 8 defines the task to run the algorithm on</p></li>
+<li><p>Line 9 defines the ROI to run the algorithm on, again leaving out .nii.gz of the filename</p></li>
+<li><p>Line 10 defines the classification trials of interest. In the study this code was created for, the goal was to classify whether each trial was a “csp” or “csm”</p></li>
+<li><p>Line 15 defines the alpha hyperparameter. Multiple alpha values can be provided in a list for this variable to perform a hyperparameter search, identifying the ideal value</p></li>
+<li><p>Line 17 defines the lambda hyperparameter. Multiple lambda values can be provided in a list for this variable to perform a hyperparameter search, identifying the ideal value</p></li>
+<li><p>Line 19 defines the variables that are included in the filename of the .npz. If no variables were removed from the previous script (01_apply_roi.py), no variables will need to be removed or changed from this line.</p></li>
+</ul>
+<p>When all variables are defined appropriately for the study data at hand, run the 02_fit_models.py script.</p>
 </section>
 </section>
 
@@ -431,7 +456,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./01-da_info"
+            path: "./02-code"
         },
         predefinedOutput: true
     }
@@ -445,17 +470,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="traditional_ML.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../01-da_info/coir_ls.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Machine Learning</p>
+            <p class="prev-next-title">CoIR<sub>LS</sub></p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="domainadapt.html" title="next page">
+    <a class='right-next' id="next-link" href="coir_output.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Domain Adaptation</p>
+        <p class="prev-next-title">CoIR Output</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
