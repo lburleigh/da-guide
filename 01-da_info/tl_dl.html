@@ -143,12 +143,29 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="coir_info.html">
-   CoIR Introduction
+   About CoIR
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="coir_ls.html">
    CoIR-LS
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-code/coir_code.html">
+   Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-code/coir_output.html">
+   CoIR Output
   </a>
  </li>
 </ul>
@@ -383,8 +400,8 @@ title="Print to PDF"
 <section id="source-and-target-domains">
 <h2>Source and Target Domains<a class="headerlink" href="#source-and-target-domains" title="Permalink to this headline">#</a></h2>
 <p>Data input into TL is either part of the source domain (i.e., the data to be leveraged; blue dataset box in Fig. 3a) or target domain (i.e., the data to be classified; green ‘Dataset’ box in Fig. 3a). The task to be learned, which uses the source domain data, is the source task (blue ‘Learning Task’ box in Fig. 3a). Using the source domain data to train the source task results in the model gaining the knowledge of this learned source task. This knowledge-improved model then influences the target task (white ‘Learning Task’ box in Fig. 3a) which the target domain data is used for. When the same source and target domains are used (i.e., identical data from one study), and the same source and target tasks are used (i.e., one learning task), the analysis is equivalent to a traditional ML model.</p>
-<p><img alt="Transfer and Transductive Learning" src="../_images/TLs.JPG" /></p>
-<p><b>Fig. 2 - Learning processes between (a) transfer learning in general and (b) domain adaptation, a type of transductive transfer learning model. </b></p>
+<p><img alt="Transfer and Transductive Learning" src="../_images/TL.JPG" /></p>
+<p><b>Fig. 2 - Domain Adaptation process. </b></p>
 </section>
 <section id="types-of-transfer-learning">
 <h2>Types of Transfer Learning<a class="headerlink" href="#types-of-transfer-learning" title="Permalink to this headline">#</a></h2>
@@ -397,7 +414,7 @@ title="Print to PDF"
 <p>A domain has two components: a feature space (i.e., the space of all term vectors) and a marginal probability distribution of the learning sample, both of which are derived from the same dataset. When the source and target domain are different, it implies that either the source and target feature spaces, or the source and target probability distributions are not the same.</p>
 <p><strong>Domain adaptation (DA)</strong>, the focus of this guide, specifies that the difference in domains occurs in the marginal probability distributions. Transductive TL, and therefore domain adaptation, specifies that <em>the learning tasks are the same</em>, implying that a predictive function learned in the source domain can be adapted to use in the target domain if some unlabeled target-domain data is provided.</p>
 <p><img alt="Transfer Learning Breakdown" src="../_images/TLtable.JPG" /></p>
-<p><b>Table 1 - The relationship between traditional ML and the three TL subtypes from (Pan and Yang 2010). </b></p>
+<p><b>Table 1 - The relationship between traditional ML and the three TL subtypes. </b></p>
 </section>
 </section>
 
