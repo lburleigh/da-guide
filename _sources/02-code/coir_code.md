@@ -1,14 +1,14 @@
 # CoIR Code
 
-All scripts and code to run the CoIR<sub>LS</sub> algorithm can be access on GitHub
+All scripts and code to run the CoIR<sub>LS</sub> algorithm can be access on GitHub here:
 [CoIR](https://github.com/lburleigh/lb_dissertation)
 
 
 ## Directory Setup
 
-Store functional nifti fMRI files in the following directory: data > raw > pymvpa > **subject#** > **fmri_files**.nii.gz
+Store functional nifti fMRI files in the following directory: `data > raw > pymvpa > **subject#** > **fmri_files**.nii.gz`
 
-ROI binary group masks should be stored in the directory: data > raw > roi > **mask_name**.nii.gz
+ROI binary group masks should be stored in the directory: `data > raw > roi > **mask_name**.nii.gz`
 
 
 ## Script 1
