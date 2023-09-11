@@ -384,36 +384,36 @@ document.write(`
 <a class="reference external" href="https://github.com/lburleigh/lb_dissertation">CoIR</a></p>
 <section id="directory-setup">
 <h2>Directory Setup<a class="headerlink" href="#directory-setup" title="Permalink to this heading">#</a></h2>
-<p>Store functional nifti fMRI files in the following directory: <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">&gt;</span> <span class="pre">raw</span> <span class="pre">&gt;</span> <span class="pre">pymvpa</span> <span class="pre">&gt;</span> <span class="pre">**subject#**</span> <span class="pre">&gt;</span> <span class="pre">**fmri_files**.nii.gz</span></code></p>
-<p>ROI binary group masks should be stored in the directory: <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">&gt;</span> <span class="pre">raw</span> <span class="pre">&gt;</span> <span class="pre">roi</span> <span class="pre">&gt;</span> <span class="pre">**mask_name**.nii.gz</span></code></p>
+<p>Store functional nifti fMRI files in the following directory: data &gt; raw &gt; pymvpa &gt; <strong>subject#</strong> &gt; <strong>fmri_files</strong>.nii.gz</p>
+<p>ROI binary group masks should be stored in the directory: data &gt; raw &gt; roi &gt; <strong>mask_name</strong>.nii.gz</p>
 </section>
 <section id="script-1">
 <h2>Script 1<a class="headerlink" href="#script-1" title="Permalink to this heading">#</a></h2>
-<p>Script 01_apply_roi.py should be run first. This script takes in the functional fMRI nifti files and a binary ROI mask in order to create a final .npz which stores the relevant task, mask, and fMRI information to be used in the following algorithm.</p>
-<p>First, edit the variables assigned in lines 13-18 of the 01_apply_roi.py script.</p>
+<p>Script <code class="docutils literal notranslate"><span class="pre">01_apply_roi.py</span></code> should be run first. This script takes in the functional fMRI nifti files and a binary ROI mask in order to create a final .npz which stores the relevant task, mask, and fMRI information to be used in the following algorithm.</p>
+<p>First, edit the variables assigned in <code class="docutils literal notranslate"><span class="pre">lines</span> <span class="pre">13-18</span></code> of the <code class="docutils literal notranslate"><span class="pre">01_apply_roi.py</span></code> script.</p>
 <ul class="simple">
-<li><p>Line 13 denotes that the condition tuple contains a phase, experiment, mask, and subject.</p></li>
-<li><p>Line 16 defines the phases. In the study this code was designed for, the two phases are two sets of tasks that were performed by each participant.</p></li>
-<li><p>Line 17 defines the experiments. In the study the code was designed for, the experiments are the two task types given in each phase. The “hab” experiment refers to a habituation task in which the instructions were learned and performed while the “task” experiment refers to the main task in which fear conditioning was introduced.</p></li>
-<li><p>Line 18 defines the mask name <strong>wihtout</strong> .nii.gz</p></li>
-<li><p>Lines 13 and 19-23 may need to be edited if any of the previous variables are not relevant to your study.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">13</span></code> denotes that the condition tuple contains a phase, experiment, mask, and subject.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">16</span></code> defines the phases. In the study this code was designed for, the two phases are two sets of tasks that were performed by each participant.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">17</span></code> defines the experiments. In the study the code was designed for, the experiments are the two task types given in each phase. The <code class="docutils literal notranslate"><span class="pre">hab</span></code> experiment refers to a habituation task in which the instructions were learned and performed while the <code class="docutils literal notranslate"><span class="pre">task</span></code> experiment refers to the main task in which fear conditioning was introduced.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">18</span></code> defines the mask name <strong>wihtout</strong> <code class="docutils literal notranslate"><span class="pre">.nii.gz</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Lines</span> <span class="pre">13</span></code> and <code class="docutils literal notranslate"><span class="pre">19-23</span></code> may need to be edited if any of the previous variables are not relevant to your study.</p></li>
 </ul>
 <p>When all variables are adjusted to the study data, run this python script.</p>
 </section>
 <section id="script-2">
 <h2>Script 2<a class="headerlink" href="#script-2" title="Permalink to this heading">#</a></h2>
-<p>Script 02_fit_models.py takes in the .npz file created from 02_fit_models.py to run the CoIR<sub>LS</sub>.</p>
-<p>First, edit the variables assigned in lines 7-19 of the 02_fit_models.py script.</p>
+<p>Script <code class="docutils literal notranslate"><span class="pre">02_fit_models.py</span></code> takes in the <code class="docutils literal notranslate"><span class="pre">.npz</span></code> file created from <code class="docutils literal notranslate"><span class="pre">02_fit_models.py</span></code> to run the CoIR<sub>LS</sub>.</p>
+<p>First, edit the variables assigned in <code class="docutils literal notranslate"><span class="pre">lines</span> <span class="pre">7-19</span></code> of the <code class="docutils literal notranslate"><span class="pre">02_fit_models.py</span></code> script.</p>
 <ul class="simple">
-<li><p>Line 7 specifies the phase to run the algorithm on</p></li>
-<li><p>Line 8 defines the task to run the algorithm on</p></li>
-<li><p>Line 9 defines the ROI to run the algorithm on, again leaving out .nii.gz of the filename</p></li>
-<li><p>Line 10 defines the classification trials of interest. In the study this code was created for, the goal was to classify whether each trial was a “csp” or “csm”</p></li>
-<li><p>Line 15 defines the alpha hyperparameter. Multiple alpha values can be provided in a list for this variable to perform a hyperparameter search, identifying the ideal value</p></li>
-<li><p>Line 17 defines the lambda hyperparameter. Multiple lambda values can be provided in a list for this variable to perform a hyperparameter search, identifying the ideal value</p></li>
-<li><p>Line 19 defines the variables that are included in the filename of the .npz. If no variables were removed from the previous script (01_apply_roi.py), no variables will need to be removed or changed from this line.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">7</span></code> specifies the phase to run the algorithm on</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">8</span></code> defines the task to run the algorithm on</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">9</span></code> defines the ROI to run the algorithm on, again leaving out <code class="docutils literal notranslate"><span class="pre">.nii.gz</span></code> of the filename</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">10</span></code> defines the classification trials of interest. In the study this code was created for, the goal was to classify whether each trial was a <code class="docutils literal notranslate"><span class="pre">csp</span></code> or <code class="docutils literal notranslate"><span class="pre">csm</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">15</span></code> defines the alpha hyperparameter. Multiple alpha values can be provided in a list for this variable to perform a hyperparameter search, identifying the ideal value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">17</span></code> defines the lambda hyperparameter. Multiple lambda values can be provided in a list for this variable to perform a hyperparameter search, identifying the ideal value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">19</span></code> defines the variables that are included in the filename of the <code class="docutils literal notranslate"><span class="pre">.npz</span></code>. If no variables were removed from the previous script (<code class="docutils literal notranslate"><span class="pre">01_apply_roi.py</span></code>), no variables will need to be removed or changed from this line.</p></li>
 </ul>
-<p>When all variables are defined appropriately for the study data at hand, run the 02_fit_models.py script.</p>
+<p>When all variables are defined appropriately for the study data at hand, run the <code class="docutils literal notranslate"><span class="pre">02_fit_models.py</span></code> script.</p>
 </section>
 </section>
 
