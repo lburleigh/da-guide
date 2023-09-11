@@ -35,4 +35,4 @@ jobs:
       with:
         personal_token: ${{ secrets.PERSONAL_TOKEN }}
         publish_dir: ./_build/html
-        external_repository: lburleigh/lburleigh.github.io/da-guide/
+        external_repository: lburleigh/da-guide
