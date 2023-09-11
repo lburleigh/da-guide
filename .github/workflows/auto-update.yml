@@ -34,5 +34,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3.5.9
       with:
         personal_token: ${{ secrets.PERSONAL_TOKEN }}
-        publish_dir: ./_build/html
         external_repository: lburleigh/da-guide
+        publish_dir: ./_build/html
